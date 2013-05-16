@@ -107,7 +107,7 @@ dataf$z <- as.character(dataf$z)
 
 ## so und jetz kannst du die dataf struktur plotten, und kriegst dazu die farb-codes aus dem dbscan
 
-ggplot(dataf, aes(x,y,colour=z)) + coord_fixed() + geom_point(alpha=.8, size=5) + theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),  axis.text.y=element_blank(), axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), legend.title = element_blank()) + labs(title = "random cluster injection") + theme(panel.background=element_rect(fill="transparent",colour="black"))
+ggplot(dataf, aes(x,y,colour=z)) + coord_fixed() + geom_point(alpha=.8, size=5) + theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),  axis.text.y=element_blank(), axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), legend.title = element_blank()) + labs(title = "random subspace injection") + theme(panel.background=element_rect(fill="transparent",colour="black"))
 
 ## und wenn du das alles hast, dann kannst du neue subspaces hinzufügen indem du dir die generieren lässt und an die z struktur unten anfügst:
 
@@ -126,7 +126,7 @@ for (i in seq(1, length(z_temp))) {
 dataf$z <- assign_class_to_indices(dataf,  seq(151,200), 5)
 
 ## und dann kannst du das wieder plotten...
-ggplot(dataf, aes(x,y,colour=z)) + coord_fixed() + geom_point(alpha=.8, size=5) + theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),  axis.text.y=element_blank(), axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), legend.title = element_blank()) + labs(title = "random cluster injection") + theme(panel.background=element_rect(fill="transparent",colour="black"))
+ggplot(dataf, aes(x,y,colour=z)) + coord_fixed() + geom_point(alpha=.8, size=5) + theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),  axis.text.y=element_blank(), axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), legend.title = element_blank()) + labs(title = "random subspace injection") + theme(panel.background=element_rect(fill="transparent",colour="black"))
 
 ### und so weiter ;)
 
