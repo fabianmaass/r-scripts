@@ -1,0 +1,3 @@
+theme(panel.grid.major = element_blank(),panel.grid.minor = element_blank(), panel.border=element_rect(colour="black",size=0.71))
+
+ggplot(dataf, aes(x,y,colour=z)) + coord_fixed() + geom_point(alpha=.8, size=5) + theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),  axis.text.y=element_blank(), axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), legend.title = element_blank()) + labs(title = paste(filename_base)) + theme(panel.background=element_rect(fill="transparent",colour="black")) + scale_colour_gradient2(high=muted("darkblue"), low="white")
